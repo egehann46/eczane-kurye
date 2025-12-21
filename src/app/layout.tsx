@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: "wsiteUrl,
+    type: "website",
+    url: siteUrl,
     title: `${siteName} | Konya Eczane Kurye`,
     description:
       "Konya genelinde lisanslı eczanelerden reçetesiz ürünlerinizi hızlı ve güvenilir kurye ile kapınıza getiriyoruz.",
@@ -76,24 +77,13 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", pe: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: siteName,
-  url: siteUrl,
-  telephone: "+905334976980",
+  urlhone: "+905334976980",
   email: "eczakapimda@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -113,7 +103,6 @@ export default function RootLayout({
     <html lang="tr">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
