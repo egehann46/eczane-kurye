@@ -18,7 +18,7 @@ const siteHostUnicode = "eczakapımda.com";
 // Teknik/SEO canonical için (Punycode)
 const siteHostAscii = "eczakapımda.com";
 
-const siteUrl = "https://eczakapımda.com";
+const siteUrl = "https://xn--eczakapmda-3ub.com";
 const siteName = "Ecza Kapımda";
 
 const metadataBase = new URL(siteUrl);
