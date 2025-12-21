@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,11 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://eczakapimda.com";
+// Görsel/marka ismi için Unicode domain kullanılabilir
+const siteHostUnicode = "eczakapımda.com";
+
+// Teknik/SEO canonical için (Punycode)
+const siteHostAscii = "xn--eczakapmda-3ub.com";
+
+const siteUrl = `https://${siteHostAscii}`;
 const siteName = "Ecza Kapımda";
 
+const metadataBase = new URL(siteUrl);
+
+export const viewport: Viewport = {
+  themeColor: "#dc2626",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase,
 
   title: {
     default: `${siteName} | Konya Eczane Kurye`,
@@ -50,7 +62,7 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     images: [
       {
-        url: "/og.png",
+        url: new URL("/og.png", metadataBase),
         width: 1200,
         height: 630,
         alt: `${siteName} Konya`,
@@ -63,7 +75,7 @@ export const metadata: Metadata = {
     title: `${siteName} | Konya Eczane Kurye`,
     description:
       "Konya genelinde lisanslı eczanelerden reçetesiz ürünlerinizi hızlı ve güvenilir kurye ile kapınıza getiriyoruz.",
-    images: ["/og.png"],
+    images: [new URL("/og.png", metadataBase)],
   },
 
   robots: {
@@ -77,13 +89,30 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+
+  manifest: "/site.webmanifest",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: siteName,
-  urlhone: "+905334976980",
+  url: siteUrl,
+  // İstersen ayrıca Unicode domaini de "sameAs" gibi alanlarda belirtebilirsin:
+  // sameAs: [`https://${siteHostUnicode}`],
+  telephone: "+905334976980",
   email: "eczakapimda@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -91,7 +120,10 @@ const jsonLd = {
     addressRegion: "Konya",
     addressCountry: "TR",
   },
-  areaServed: "Konya",
+  areaServed: {
+    "@type": "City",
+    name: "Konya",
+  },
 };
 
 export default function RootLayout({
@@ -101,12 +133,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
       </body>
     </html>
   );
