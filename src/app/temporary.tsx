@@ -151,7 +151,7 @@ export default function Home() {
                 </h1>
                 
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Adana'nın profesyonel kurye ekibi olarak, lisanslı eczanelerden 
+                  Konya'nın profesyonel kurye ekibi olarak, lisanslı eczanelerden 
                   ilaçlarınızı hızlı ve güvenilir şekilde adresinize getiriyoruz.
                 </p>
 
@@ -222,7 +222,7 @@ export default function Home() {
                       <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                       </svg>
-                      <span className="text-red-600 font-medium">Adana Geneli Hizmet</span>
+                      <span className="text-red-600 font-medium">Konya Geneli Hizmet</span>
                     </div>
                   </div>
 
@@ -361,7 +361,7 @@ export default function Home() {
                   Hakkımızda
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Eczane Kapımda olarak, Adana'da profesyonel kurye hizmeti veren bir ekibiz. 
+                  Ecza Kapımda olarak, Konya'da profesyonel kurye hizmeti veren bir ekibiz. 
                   2020 yılından bu yana, lisanslı eczanelerle işbirliği halinde ilaç ihtiyaçlarınızı 
                   en hızlı ve güvenilir şekilde kapınıza getiriyoruz.
                 </p>
@@ -465,7 +465,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Adres</h3>
-                <p className="text-gray-600">Seyhan / ADANA</p>
+                <p className="text-gray-600">Seyhan / Konya</p>
                 <p className="text-gray-600">Merkez Ofis</p>
               </div>
             </div>
@@ -500,7 +500,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-400 mt-4">
-                Adana'nın en hızlı ve güvenilir ilaç kurye hizmeti.
+                Konya'nın en hızlı ve güvenilir ilaç kurye hizmeti.
               </p>
             </div>
             <div>
@@ -521,7 +521,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Eczane Kapımda. Tüm hakları saklıdır.</p>
+            <p>&copy; 2024 Ecza Kapımda. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>

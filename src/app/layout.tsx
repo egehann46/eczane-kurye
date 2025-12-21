@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eczane Kapımda - Adana İlaç Kurye Hizmeti",
-  description: "Adana'nın en hızlı ve güvenilir ilaç kurye hizmeti. 30 dakika içinde kapınızda!",
+  title: "Ecza Kapımda - Konya İlaç Kurye Hizmeti",
+  description: "Konya'nın en hızlı ve güvenilir ilaç kurye hizmeti. 30 dakika içinde kapınızda!",
   icons: {
     icon: [
       {
