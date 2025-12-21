@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 const siteHostUnicode = "eczakapımda.com";
 
 // Teknik/SEO canonical için (Punycode)
-const siteHostAscii = "xn--eczakapmda-3ub.com";
+const siteHostAscii = "eczakapımda.com";
 
 const siteUrl = "https://eczakapımda.com";
 const siteName = "Ecza Kapımda";
