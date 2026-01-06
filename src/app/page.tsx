@@ -6,7 +6,7 @@ export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const PHONE_DISPLAY = "05334976980";
+  const PHONE_DISPLAY = "(0533) 497 69 80";
   const PHONE_TEL = "+905334976980";
   const WHATSAPP_LINK = "https://wa.me/905334976980";
   const EMAIL = "eczakapimda@gmail.com";
