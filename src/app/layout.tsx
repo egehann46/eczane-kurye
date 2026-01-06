@@ -149,6 +149,15 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google Ads - Telefon Araması (Web) etkinlik snippet'i */}
+        <Script id="google-ads-phone-web-snippet" strategy="afterInteractive">
+          {`
+            gtag('config', 'AW-17853440695/pQjZCJuSh94bELfFl8FC', {
+              'phone_conversion_number': '(0533) 497 69 80'
+            });
+          `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
