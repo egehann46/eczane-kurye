@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -10,6 +10,16 @@ export default function Home() {
   const PHONE_TEL = "+905334976980";
   const WHATSAPP_LINK = "https://wa.me/905334976980";
   const EMAIL = "eczakapimda@gmail.com";
+
+  // ✅ Hydration sonrası Google Ads phone snippet'ini yeniden tetikle
+  useEffect(() => {
+    const gtag = (window as any).gtag as undefined | ((...args: any[]) => void);
+    if (typeof gtag === "function") {
+      gtag("config", "AW-17853440695/pQjZCJuSh94bELfFl8FC", {
+        phone_conversion_number: "(0533) 497 69 80",
+      });
+    }
+  }, []);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -295,7 +305,7 @@ export default function Home() {
                         >
                           <path
                             fillRule="evenodd"
-                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                             clipRule="evenodd"
                           ></path>
                         </svg>
