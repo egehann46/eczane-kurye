@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+<img width="1470" height="786" alt="Ekran Resmi 2026-01-11 03 50 50" src="https://github.com/user-attachments/assets/b11c5938-19af-4861-8720-515d7a1d7894" />
+<img width="1470" height="786" alt="Ekran Resmi 2026-01-11 03 51 19" src="https://github.com/user-attachments/assets/6894759e-9366-41fd-bfbf-82973dcb2a81" />
+<img width="1470" height="786" alt="Ekran Resmi 2026-01-11 03 51 33" src="https://github.com/user-attachments/assets/abb3638c-69ba-467c-9841-fdfc8c385c80" />
+<img width="1470" height="793" alt="Ekran Resmi 2026-01-11 03 51 51" src="https://github.com/user-attachments/assets/5a37591d-7062-4ab8-a8e1-dfe79352f4a8" />
+
+
 ## Getting Started
 
 First, run the development server:
