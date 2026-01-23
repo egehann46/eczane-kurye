@@ -157,7 +157,13 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script 
+          src="https://erisilebilirlik.vercel.app/accessibility-widget.js" 
+          strategy="lazyOnload" 
+        />
+
         <script
+          
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
