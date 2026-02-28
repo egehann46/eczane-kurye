@@ -46,15 +46,11 @@ export default function HomePage() {
   return (
     <div
       className="home-landing grid bg-white overflow-hidden"
-      style={{
-        height: "100dvh",
-        gridTemplateRows: "55% 40% 5%",
-      }}
+      style={{ height: "100dvh" }}
     >
       {/* Mobilde masaüstünde farklı davranış için md: override */}
-      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 md:row-span-3 md:relative md:grid md:grid-cols-[1fr_320px] md:items-center"
-        style={{ gridRow: "1 / 2" }}
-      >
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 md:col-span-1 md:row-span-2 md:relative md:grid md:grid-cols-[1fr_320px] md:items-center">
+
         {/* İçerik */}
         <div className="relative z-10 flex flex-col items-center md:items-start">
           {/* Logo */}
@@ -138,14 +134,13 @@ export default function HomePage() {
       </div>
 
       {/* Mobil moto alanı (sabit %40 yükseklik) */}
-      <div className="relative z-0 pointer-events-none overflow-hidden md:hidden"
-        style={{ gridRow: "2 / 3" }}
-      >
+      <div className="relative z-0 pointer-events-none overflow-hidden md:hidden">
+
         <MotoCourier />
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-center" style={{ gridRow: "3 / 4" }}>
+      <div className="flex items-center justify-center">
         <p className="text-gray-400 text-xs">
           &copy; 2026 Ecza Kapımda. Tüm hakları saklıdır.
         </p>

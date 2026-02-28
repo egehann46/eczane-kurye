@@ -203,6 +203,16 @@ html, body {
   }
 }
 
+/* Homepage grid layout */
+.home-landing {
+  grid-template-rows: 55% 40% 5%;
+}
+@media (min-width: 768px) {
+  .home-landing {
+    grid-template-rows: 1fr auto;
+  }
+}
+
 /* Mobile: scooter in bottom area */
 @media (max-width: 767px) {
   .home-landing .moto-stage {
