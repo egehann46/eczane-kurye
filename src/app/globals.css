@@ -12,17 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
+html, body {
+  background: #ffffff;
+  color: #171717;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* ── Existing animations ── */
@@ -211,7 +206,7 @@ body {
 /* Mobile: scooter in bottom area */
 @media (max-width: 767px) {
   .home-landing .moto-stage {
-    min-height: 180px;
+    min-height: 0;
     height: 100%;
   }
   .home-landing .moto-sprite {
@@ -239,31 +234,31 @@ body {
 
 @keyframes motoOrbitMobile {
   0% {
-    transform: translate(200px, 110px) scale(0.5);
+    transform: translate(200px, 20px) scale(0.5);
     opacity: 0.86;
   }
   20% {
-    transform: translate(160px, 85px) scale(0.7);
+    transform: translate(160px, 5px) scale(0.7);
     opacity: 0.96;
   }
   38% {
-    transform: translate(80px, 75px) scale(0.9);
+    transform: translate(80px, 0px) scale(0.9);
     opacity: 1;
   }
   55% {
-    transform: translate(10px, 85px) scale(0.8);
+    transform: translate(10px, 5px) scale(0.8);
     opacity: 0.98;
   }
   72% {
-    transform: translate(-60px, 110px) scale(0.6);
+    transform: translate(-60px, 20px) scale(0.6);
     opacity: 0.88;
   }
   86% {
-    transform: translate(40px, 120px) scale(0.5);
+    transform: translate(40px, 30px) scale(0.5);
     opacity: 0.78;
   }
   100% {
-    transform: translate(200px, 110px) scale(0.5);
+    transform: translate(200px, 20px) scale(0.5);
     opacity: 0.86;
   }
 }

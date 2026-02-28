@@ -44,13 +44,21 @@ export default function HomePage() {
   }, [router, citySlugs]);
 
   return (
-    <div className="home-landing h-screen flex flex-col bg-white overflow-hidden">
-      {/* Mobil: üstte içerik, altta moto | Masaüstü: yan yana */}
-      <div className="flex-1 flex flex-col md:relative md:grid md:grid-cols-[1fr_320px] md:items-center px-4 sm:px-6 lg:px-12">
+    <div
+      className="home-landing grid bg-white overflow-hidden"
+      style={{
+        height: "100dvh",
+        gridTemplateRows: "55% 40% 5%",
+      }}
+    >
+      {/* Mobilde masaüstünde farklı davranış için md: override */}
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 md:row-span-3 md:relative md:grid md:grid-cols-[1fr_320px] md:items-center"
+        style={{ gridRow: "1 / 2" }}
+      >
         {/* İçerik */}
-        <div className="relative z-10 flex flex-col items-center md:items-start pt-24 md:pt-0 md:justify-center">
+        <div className="relative z-10 flex flex-col items-center md:items-start">
           {/* Logo */}
-          <div className="bg-red-600 rounded-xl px-5 py-3 shadow-lg mb-4 md:mb-6">
+          <div className="bg-red-600 rounded-xl px-5 py-3 shadow-lg mb-3 md:mb-6">
             <div className="text-white font-black text-lg leading-tight tracking-wide font-sans text-center">
               <div>ECZA</div>
               <div>KAPIMDA</div>
@@ -62,12 +70,12 @@ export default function HomePage() {
             <span className="text-gray-900">Eczane </span>
             <span className="text-red-600">Kapınızda!</span>
           </h1>
-          <p className="text-gray-500 text-center md:text-left mb-4 md:mb-8 text-sm sm:text-base">
+          <p className="text-gray-500 text-center md:text-left mb-3 md:mb-8 text-sm sm:text-base">
             Hizmet almak istediğiniz şehri seçin
           </p>
 
           {/* Şehir Kartları */}
-          <div className="flex flex-row gap-4 sm:gap-6 w-full max-w-lg justify-center md:justify-start mb-4 md:mb-8">
+          <div className="flex flex-row gap-4 sm:gap-6 w-full max-w-lg justify-center md:justify-start mb-3 md:mb-8">
             {cities.map((city) => {
               const isActive = city.phone !== null;
               return (
@@ -123,13 +131,21 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Moto: Mobilde altta ayrı alan, masaüstünde overlay */}
-        <div className="relative flex-1 md:absolute md:inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Masaüstü moto overlay (sadece md+) */}
+        <div className="hidden md:block absolute inset-0 z-0 pointer-events-none">
           <MotoCourier />
         </div>
       </div>
 
-      <div className="py-3 md:py-4 text-center">
+      {/* Mobil moto alanı (sabit %40 yükseklik) */}
+      <div className="relative z-0 pointer-events-none overflow-hidden md:hidden"
+        style={{ gridRow: "2 / 3" }}
+      >
+        <MotoCourier />
+      </div>
+
+      {/* Footer */}
+      <div className="flex items-center justify-center" style={{ gridRow: "3 / 4" }}>
         <p className="text-gray-400 text-xs">
           &copy; 2026 Ecza Kapımda. Tüm hakları saklıdır.
         </p>
